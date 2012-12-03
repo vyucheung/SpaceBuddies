@@ -1,0 +1,59 @@
+.panel{
+    height: 35px;
+    position: absolute;
+    width:100%;
+}
+.bottom{
+    bottom:0px;
+}
+.transparent{
+    background: #ffffff;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}
+div.text{
+    position: absolute; 
+    line-height: 24px;
+    font-size: 12px;
+    color:#ffffff;
+	z-index: 2;
+    padding:5px;
+}
+div.left{
+    left:20px;
+}
+.bars{
+    position: absolute;
+    padding:5px;
+    height:auto;
+}
+div .ui-progressbar{
+    background:url(../img/bars.png) top left no-repeat;
+    width:178px;
+    height:24px;
+}
+div .red .ui-progressbar-value{
+    display: block;
+    height:100%;
+    background:url(../img/bars.png) -0px -48px no-repeat;
+}
+div .yellow .ui-progressbar-value{
+    display: block;
+    height:100%;
+    background:url(../img/bars.png) -0px -72px no-repeat;
+}
+div .green .ui-progressbar-value{
+	display: block;
+    height:100%;
+    background:url(../img/bars.png) -0px -24px no-repeat;
+	margin-top: -25px;
+}
+div .blue .ui-progressbar-value{
+	display: block;
+    height:100%;
+    background:url(../img/bars.png) -0px -96px no-repeat;
+	margin-top: -25px;
+}

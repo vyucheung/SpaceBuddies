@@ -1,0 +1,71 @@
+#nav-reflection {
+		margin: 0 auto 0px auto;
+		padding: 150px 0 0 0px;
+		min-height: 130px;
+		width: 600px;
+		list-style: none;
+		}
+			
+#nav-reflection li {
+margin-right: 30px;
+width: 90px;
+float: left;
+}
+
+#nav-reflection a, #nav-reflection a:visited, #nav-reflection a:hover {
+	width: 90px;
+	height: 90px;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url(/img/icon_set.png) no-repeat;
+	display: block;
+}
+
+#nav-reflection span {
+	margin-top: 1px;
+	width: 90px;
+	height: 90px;
+	text-align: center;
+	background: url(/img/reflections.png) no-repeat;
+	display: block;
+}
+
+#nav-reflection li.adventure_button a {
+	background-position: 0px 0px;
+}
+
+#nav-reflection li.invade_button a {
+	background-position: -90px 0px;
+}
+
+#nav-reflection li.shop_button a {
+	background-position: -180px 0px;
+}
+
+#nav-reflection li.upgrade_button a {
+	background-position: -270px 0px;
+}
+
+#nav-reflection li.defenses_button a {
+	background-position: -360px 0px;
+}
+
+#nav-reflection li.adventure_button span {
+	background-position: 0 0;
+}
+			
+#nav-reflection li.invade_button span {
+	background-position: -90px 0;
+}
+
+#nav-reflection li.shop_button span {
+			background-position: -180px 0;
+}
+
+#nav-reflection li.upgrade_button span {
+			background-position: -270px 0;
+}
+
+#nav-reflection li.defenses_button span {
+			background-position: -360px 0;
+}

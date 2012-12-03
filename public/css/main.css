@@ -1,0 +1,33 @@
+body {
+  margin: 10px 0;
+  font-family: "lao ui";
+  font-size: 1.2em;
+}
+
+#main_wrapper{
+	width: 720px;
+	height: 460px;
+	position: relative;
+	background-image: url("../img/background.png");
+	
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+#logo_wrapper{
+	width: 283px;
+	height: 54px;
+	position: absolute;
+	top: 75px;
+	left: 50%;
+	margin-left: -142px;
+	background-image: url("../img/logo.png");
+}
+
+#menu_container{
+	position: absolute;
+	top: 110px;
+	width: 720px;
+	height: 350px;
+}
