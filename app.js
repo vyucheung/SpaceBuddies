@@ -1,5 +1,6 @@
 var express = require('express'),
 	everyauth = require('everyauth'),
+	http = require('http'),
     routes = require('./routes');
 	
 var FACEBOOK_APP_ID = "502777829753079";
@@ -53,7 +54,19 @@ app.configure(function(){
 
 // Routes
 app.post('/', routes.index);
-app.get('/', routes.index);
+app.get('/username', routes.username);
+app.post('/username', routes.username);
 
-app.listen(80);
+var server = http.createServer(app);
+
+var io = require('socket.io').listen(server);
+var spaceBudds = require('./spacebudds');
+
+io.sockets.on('connection', function (socket) {
+	spaceBudds.init(socket);
+});
+
+server.listen(80, function() {
+	spaceBudds.connectToDatabase();
+});
 

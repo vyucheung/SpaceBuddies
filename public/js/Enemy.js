@@ -34,7 +34,6 @@ function straightDown()
 }
 
 Crafty.c("Enemy",{
-	id: "enemy",
 	init:function(){
 		this.requires("2D,DOM,Collision,target")
 		.bind("Hurt", function(dmg){
@@ -60,7 +59,8 @@ Crafty.c("Enemy",{
 				.attr({x: this.x - (320/5)/2, y:this.y - (320/5)/2})
 				.animate("die", 0, 0, (320 - (320/5)))
 				.animate('die', 0, 0);
-				this.destroy();
+			socket.emit('HitEnemy', this.secret);
+			this.destroy();
 		})
 		.bind("EnterFrame", function(frame){
 			if(this.x > Crafty.viewport.width+this.w ||
@@ -80,6 +80,7 @@ Crafty.c("Enemy",{
 
 //basic enemy
 Crafty.c("Scrub",{	
+	id: "enemy",
 	expl_dmg: 10,
 	shield:{
 		current: 0,

@@ -10,15 +10,35 @@
 	<script type="text/javascript" src="/js/crafty-min.js"></script>
 	<script type="text/javascript" src="/js/Weapons.js"></script>
 	<script type="text/javascript" src="/js/Enemy.js"></script>
-	<script type="text/javascript" src="/js/q_weaps.js"></script>
-	<script type="text/javascript" src="/js/w_weaps.js"></script>
-	 <script type="text/javascript" src="/js/e_weaps.js"></script>
-	 <script type="text/javascript" src="/js/r_weaps.js"></script>
 	<script type="text/javascript" src="/js/player.js"></script>
 	<script type="text/javascript" src="/js/game_functions.js"></script>
+	<script text="text/javascript" src="/js/fbData.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script text="text/javascript" src="/js/slimScroll.min.js"></script>
 	 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+	<script text="text/javascript" src="/js/jquery.simplemodal.js"></script>
 </head>
 <body>
+
+	<div id="fb-root"></div>
+	<script>		
+		window.fbAsyncInit = function() {
+			FB.login(function(response) {
+			   if (response.authResponse) {
+				 loadFacebookFriends();
+			   } else {
+				 console.log('User cancelled login or did not fully authorize.');
+			   }
+			 });
+		};
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=<%= appId %>";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 	<div id="main_wrapper">
 		<div id="game_wrapper">
 			<div id="logo_wrapper"></div>
@@ -27,10 +47,22 @@
 					<li class="adventure_button" ><a href="#" title="Adventure"></a></li>
 					<li class="invade_button" ><a href="#" title="Invade"></a></li>
 					<li class="shop_button" ><a href="#" title="Shop"></a></li>
-					<li class="upgrade_button" ><a href="#" title="Upgrade"></a></li>
 					<li class="defenses_button" ><a href="#" title="Defenses"></a></li>
+					<li class="upgrade_button" ><a href="#" title="Upgrade"></a></li>
 				</ul>
 			</div>
+		</div>
+	</div>
+	
+	<div id="friend_list">
+		<div class="heading">
+			Click on a friend to start a game!
+		</div>
+		<div class="search">
+			<input type="text" />
+		</div>
+		<div class="items">
+			<div class="scrollable"></div>
 		</div>
 	</div>
 </body>

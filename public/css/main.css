@@ -31,3 +31,119 @@ body {
 	width: 720px;
 	height: 350px;
 }
+
+#friend_list {
+	display: none;
+	width: 400px;
+	height: 200px;
+}
+
+#friend_list .heading {
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 12px 12px 20px 12px;
+	text-shadow: 0 1px 1px #666;
+	
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	
+	background: #a7cfdf;
+	background: -moz-linear-gradient(top, #a7cfdf 0%, #23538a 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a7cfdf), color-stop(100%,#23538a));
+	background: -webkit-linear-gradient(top, #a7cfdf 0%,#23538a 100%);
+	background: -o-linear-gradient(top, #a7cfdf 0%,#23538a 100%);
+	background: -ms-linear-gradient(top, #a7cfdf 0%,#23538a 100%);
+	background: linear-gradient(top, #a7cfdf 0%,#23538a 100%);
+}
+
+#friend_list .search {
+	margin-top: -8px;
+	background: #fff;
+	text-align: right;
+}
+
+#friend_list .search input {
+	margin: 10px 10px 8px 10px;
+	border: 1px solid #aaa;
+}
+
+#friend_list .items {
+	height: 350px;
+	background: white;
+	width: 400px;
+}
+
+#friend_list .item {
+	position: relative;
+	border-bottom: 1px solid #ddd;
+	padding: 6px;
+}
+
+#friend_list .item:hover {
+	background: #DBECFF;
+	cursor: pointer;
+}
+
+#friend_list .item .pic {
+	display: block;
+	-webkit-box-shadow: 0 0 3px #666;
+    -moz-box-shadow:  0 0 3px #666;
+    box-shadow: 0 0 3px #666;
+}
+
+#friend_list .item .name {
+	position: absolute;
+	top: 22px;
+	left: 65px;
+	color: #375687;
+	font-size: 14px;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #eee;
+}
+
+#friend_list .item .button {
+	position: absolute;
+	top: 18px;
+	right: 12px;
+	width: 60px;
+	height: 25px;
+	line-height: 25px;
+	color: #fff;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 0 1px 1px #666;
+	
+	-webkit-box-shadow: 0 0 2px #999;
+    -moz-box-shadow: 0 0 2px #999;
+    box-shadow: 0 0 2px #999;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+#friend_list .item .button.play {
+	background: #c9de96;
+	background: -moz-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9de96), color-stop(44%,#8ab66b), color-stop(100%,#398235));
+	background: -webkit-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%);
+	background: -o-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%);
+	background: -ms-linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%);
+	background: linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%);
+	-pie-background: linear-gradient(top, #c9de96 0%,#8ab66b 44%,#398235 100%);
+	behavior: url(PIE.htc);
+}
+
+#friend_list .item .button.invite {
+	background: #a7cfdf;
+	background: -moz-linear-gradient(top, #a7cfdf 0%, #23538a 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a7cfdf), color-stop(100%,#23538a));
+	background: -webkit-linear-gradient(top, #a7cfdf 0%,#23538a 100%);
+	background: -o-linear-gradient(top, #a7cfdf 0%,#23538a 100%);
+	background: -ms-linear-gradient(top, #a7cfdf 0%,#23538a 100%);
+	background: linear-gradient(top, #a7cfdf 0%,#23538a 100%);
+	-pie-background: linear-gradient(top, #a7cfdf 0%,#23538a 100%);
+	behavior: url(PIE.htc);
+}

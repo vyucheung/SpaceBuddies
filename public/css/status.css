@@ -14,13 +14,14 @@
     -khtml-opacity: 0.5;
     opacity: 0.5;
 }
-div.text{
-    position: absolute; 
+span.text{
+    position: absolute;
+    width: 100%;
+    display:block;
+    text-align: center;
     line-height: 24px;
     font-size: 12px;
-    color:#ffffff;
-	z-index: 2;
-    padding:5px;
+    color:#333333;
 }
 div.left{
     left:20px;
@@ -29,31 +30,41 @@ div.left{
     position: absolute;
     padding:5px;
     height:auto;
+	width: 100%;
+	bottom: -5px;
 }
 div .ui-progressbar{
-    background:url(../img/bars.png) top left no-repeat;
+	display: inline-block;
+	position: relative;
+    background:url(../img/bars.png) -0px -0px no-repeat;
     width:178px;
     height:24px;
+	margin-left: 5px;
 }
 div .red .ui-progressbar-value{
     display: block;
     height:100%;
     background:url(../img/bars.png) -0px -48px no-repeat;
+	margin-left: -1px;
 }
 div .yellow .ui-progressbar-value{
     display: block;
     height:100%;
     background:url(../img/bars.png) -0px -72px no-repeat;
+	margin-left: -1px;
 }
 div .green .ui-progressbar-value{
 	display: block;
     height:100%;
     background:url(../img/bars.png) -0px -24px no-repeat;
-	margin-top: -25px;
 }
 div .blue .ui-progressbar-value{
 	display: block;
     height:100%;
     background:url(../img/bars.png) -0px -96px no-repeat;
-	margin-top: -25px;
+	margin-left: -1px;
+}
+
+div .cooldown{
+	width: 10%;
 }
